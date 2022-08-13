@@ -1,11 +1,5 @@
-from email.policy import default
-from secrets import choice
-from tabnanny import verbose
-from tkinter import CASCADE
 from django.db import models
 from django.contrib.auth.models import User
-
-from pedido import views
 
 
 class Pedido(models.Model):
@@ -26,7 +20,7 @@ class Pedido(models.Model):
     )
 
     def __str__(self):
-        return f'Pedido N.{self.pk}'
+        return f'Pedido N. {self.pk}'
 
 
 class ItemPedido(models.Model):
